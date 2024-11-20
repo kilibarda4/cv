@@ -1,6 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
+\usepackage{ulem}
 
 %other packages for formatting
 \RequirePackage{color}
@@ -13,6 +14,7 @@
 
 %for lists within experience section
 \usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
 
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
@@ -58,6 +60,7 @@
 \pagestyle{empty} 
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
+\vspace{-2em}
 \Huge{Nebojša Kilibarda} \\[1pt]
 \href{https://github.com/kilibarda4}{\raisebox{-0.05\height}\faGithub\ kilibarda4} \ $|$ \ 
 \href{https://linkedin.com/in/nebojsakili}{\raisebox{-0.05\height}\faLinkedin\ nebojsakili} \ $|$ \ 
@@ -66,72 +69,88 @@
 \end{tabularx}
 
 %Interests/ Keywords/ Summary
+\vspace{-0.7em}
 \section{Objective}
-Aspiring Software Engineer with a strong foundation in Computer Science and professional experience developing and maintaining scalable and secure software systems, as well as firmware for embedded devices. Seeking to leverage my technical skills in a challenging, fast-paced role contributing to the development of cutting-edge technology.
+Software Engineer with a strong foundation in Computer Science and professional experience delivering
+scalable and secure software and firmware products by leveraging modern development methodologies
+in an agile environment. Excellent communication and collaboration skills and experience working on
+cross-functional teams.
 
-\section{Education}
-\noindent
-\begin{tabularx}{\linewidth}{@{}Xr@{}}
-\textbf{Bachelor of Science, Computer Science} & 2021 - 2025 \\
-\end{tabularx}
-\vspace{0.2em}
-University of Texas at Arlington \ GPA (3.72 / 4.0) \\
-\textit{Upsilon Pi Epsilon Computing Honor's Society}
-
-
+\vspace{-0.7em}
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Programming Languages: &  \normalsize{Python, C, C++, Java, SQLite, JavaScript, React, HTML, CSS}\\
-Tech and Skills:  &  \normalsize{PyTorch, scikit-learn, TensorFlow, TensorFlow Lite, Google Cloud Services, Segger Embedded Studio, Saleae, Altium, GitHub, Fork, Agile}\\  
+\hspace{2.1em} \textbf{Languages:} Python, Java, C, C++, JavaScript, HTML/CSS, NoSQL, SQL \\
+\hspace{1.3em} \textbf{Frameworks:} PyQt, PyTorch, TensorFlow, Node.js, React, Spring Boot, Swing, Tkinter, gensim \\
+\textbf{Tools/Libraries:} GCP, AWS, Terraform, DevOps, Git, TensorFlow, GitLab/GitHub, Networking, \\ \hspace{8.1em}  Wireshark, Agile/Scrum/Waterfall, Saleae, Altium, Figma, nRF SDK, Segger SDK, \\ \hspace{8.1em} UNIX, linux, NumPy, Pandas, scikit \\
 \end{tabularx}
 
-%Projects
-\section{Recent Projects}
-
-\href{https://github.com/kilibarda4/natural-language-processing}{\textbf{Natural Language Processing}} \ \textit{Python, sklearn, gensim, PyTorch, Numpy}
-\begin{itemize}[leftmargin=*, nosep]
-    \item Developed several Machine Learning models for natural language processing from scratch (sentiment-analysis, neural networks, RNN, CRF, HMM, etc.).
-\end{itemize}
-
-\href{https://github.com/kilibarda4/pos-tagger-Maithili}{\textbf{POS Tagger for Maithili}} \ \textit{Python, PyTorch, scikit-learn}
-\begin{itemize}[leftmargin=*, nosep]
-    \item Custom Part-Of-Speech tagger for the Maithili language with 90\% accuracy using PyTorch (CRF + BERT model).
-\end{itemize}
-
-\href{https://github.com/kilibarda4/animal-recognition-android}{\textbf{Animal Recognition}} \ \textit{Java, TensorFlow, Google Cloud Services, Android Studio}
-\begin{itemize}[leftmargin=*, nosep]
-    \item Android application for animal sound classification using Java and Google Cloud Services.
-\end{itemize}
 %Experience
+\vspace{-0.7em}
 \section{Professional Experience}
 
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
-\textbf{Software Engineer Internship} & \hfill September 2024 - Present
+\textbf{Software Engineer Internship} & \hfill August 2024 - Present
 \end{tabularx}
 \textit{Ommo Technologies, Inc.}
-\begin{itemize}[leftmargin=*, nosep]
-    \item Development, maintenance and documentation of core customer facing software as well as internal software used for programming, testing and calibration of physical products.
-    \item Tasked with the complete development process, from design to implementation and testing, of software that interfaces with a range of devices developed at Ommo Technologies.
+\vspace{-0.4em}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+    \item Developed an application to manage the state of products' components, which \textbf{enhanced testing and troubleshooting efficiency by 30\%} for clients.
+    \item Tasked with developing, maintaining, and documenting customer-facing and internal software for product testing and calibration on a cross-functional team.
 \end{itemize}
 
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
 \textbf{Embedded Software Engineer Internship} & \hfill May 2024 - August 2024
 \end{tabularx}
 \textit{Ommo Technologies, Inc.}
-\begin{itemize}[leftmargin=*, nosep]
-    \item Completed full board bring-up of a custom PCB equipped with a Nordic micro-controller, from pin-out to application layer communication.
-    \item Utilized several communication protocols (SPIM, UART, I2C, USB) and the Nordic software development kit.
-    \item Transformed information from data-sheet into C/C++ code.
-    \item Performed testing and debugging on several internal and external products, using logic analyzers and oscilloscopes.
+\vspace{-0.4em}
+\begin{itemize}[leftmargin=*, nosep]    
+    \item Created a software architecture for a custom PCB with Nordic micro-controller (SPIM, UART, I2C, USB) resulting in a \textbf{20\% increase in sampling rate and 10\% decrease in error rate.}
+    \item Performed hardware and unit testing with logic analyzers and oscilloscopes as well as device calibration, \textbf{shortening the development timeline by 20\%}.
 \end{itemize}
 
+%Education
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
 \textbf{Easy-Med - Security, Privacy Assured IoMT} & \hfill May 2023 - July 2023
 \end{tabularx}
 \textit{National Science Foundation}
+\vspace{-0.4em}
 \begin{itemize}[leftmargin=*, nosep]
-    \item Training program on sensing, security and privacy aspects of smart healthcare
-    \item Gained insight into smart contracts and embedded programming for medical devices (IoMT)
+    \item Trained on smart healthcare, received a \textbf{100\% evaluation} on core aspects of cybersecurity and embedded programming in the medical industry.
+\end{itemize}
+
+\vspace{-0.7em}
+\section{Education}
+\noindent
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+\textbf{Bachelor of Science, Computer Science} & August 2021 - May 2025 \\
+\end{tabularx}
+\vspace{0.2em}
+University of Texas at Arlington \ GPA (3.72 / 4.0) \\
+\textit{Upsilon Pi Epsilon Computing Honor's Society}
+
+%Projects
+\vspace{-0.7em}
+\section{Recent Projects}
+
+\href{https://github.com/kilibarda4/pos-tagger-Maithili}{\textbf{POS Tagger for Maithili}} \ \textit{Python, PyTorch, scikit-learn}
+\begin{itemize}[leftmargin=*, nosep]
+\vspace{-0.4em}
+    \item Developed a custom \textbf{CRF + BERT} Part-Of-Speech tagger for the Maithili language, achieving \\ \textbf{91\% accuracy and 90\% precision} on a limited dataset.
+\end{itemize}
+
+%Animal Recognition
+\vspace{-0.4em}
+\href{https://github.com/kilibarda4/animal-recognition-android}{\textbf{Animal Recognition}} \ \textit{Java, Firestore, Google Storage, OAuth, TensorFlow}
+\begin{itemize}[leftmargin=*, nosep]
+\vspace{-0.4em}
+    \item Developed a cloud hosted serverless android audio classification app which discerns between 100 species of animals with an \textbf{accuracy of 93\%}, provided personalized profiles and classification history for users.
+\end{itemize}
+
+\vspace{-0.4em}
+\href{https://github.com/kilibarda4/natural-language-processing}{\textbf{Natural Language Processing}} \ \textit{Python, sklearn, gensim, PyTorch, Numpy}
+\begin{itemize}[leftmargin=*, nosep]
+\vspace{-0.4em}
+    \item Built several Machine Learning models for natural language processing from scratch (sentiment-analysis, neural networks, RNN, CRF, HMM, etc.)
 \end{itemize}
 
 \vfill
