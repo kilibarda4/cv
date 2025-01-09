@@ -1,55 +1,37 @@
 \documentclass[a4paper,12pt]{article}
-\usepackage{url}
+\usepackage[T1]{fontenc}    % Use T1 font encoding
+\usepackage{lmodern}        % Use the Latin Modern font family
+
+% for paragraph spacing
 \usepackage{parskip}
-\usepackage{ulem}
 
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=.9]{geometry}
 
-%tabularx environment
+% tabularx environment
 \usepackage{tabularx}
 
-%for lists within experience section
+% for lists within experience section
 \usepackage{enumitem}
-\setlist[itemize]{noitemsep, topsep=0pt}
+% spacing of bullet items in lists
+\setlist[itemize]{leftmargin=1.5em, noitemsep, topsep=0pt}
 
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
+% custom \section
+\usepackage{titlesec}
 
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{8pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
+% Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\definecolor{linkcolour}{rgb}{0,0,0} % black links
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
 
 %for social icons
 \usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -65,38 +47,36 @@
 \href{https://github.com/kilibarda4}{\raisebox{-0.05\height}\faGithub\ kilibarda4} \ $|$ \ 
 \href{https://linkedin.com/in/nebojsakili}{\raisebox{-0.05\height}\faLinkedin\ nebojsakili} \ $|$ \ 
 \href{mailto:nebojsakilibarda4@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ nebojsakilibarda4@gmail.com} \ $|$ \ 
-\href{tel:+4697343716}{\raisebox{-0.05\height}\faMobile \ +(469) 734 3716} \\
+\raisebox{-0.05\height}\faMobile \ +(469) 734 3716 \\
 \end{tabularx}
 
 %Interests/ Keywords/ Summary
 \vspace{-0.7em}
 \section{Objective}
-Software Engineer with a strong foundation in Computer Science and professional experience delivering
-scalable and secure software and firmware products by leveraging modern development methodologies
-in an agile environment. Excellent communication and collaboration skills and experience working on
-cross-functional teams. Always happy to be here.
+Software Engineer with a rich skill set stemming from academic excellence and professional experience delivering scalable and secure software and firmware solutions in agile environments. A meticulous and thorough team player, I value cooperation, healthy competition and a team spirit.
 
 \vspace{-0.7em}
-\section{Skills}
+\section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\hspace{2.1em} \textbf{Languages:} Python, Java, C, C++, JavaScript, HTML/CSS, NoSQL, SQL \\
-\hspace{1.3em} \textbf{Frameworks:} PyQt, PyTorch, TensorFlow, Node.js, React, Spring Boot, Swing, Tkinter, gensim \\
-\textbf{Tools/Libraries:} GCP, AWS, Terraform, DevOps, Git, TensorFlow, GitLab/GitHub, Networking, \\ \hspace{8.1em}  Wireshark, Agile/Scrum/Waterfall, Saleae, Altium, Figma, nRF SDK, Segger SDK, \\ \hspace{8.1em} UNIX, linux, NumPy, Pandas, scikit \\
+\textbf{Languages:} Python, C, C++, Java, JavaScript, HTML/CSS, SQL, NoSQL, C\# \\
+\textbf{Frameworks:} PyQt, Node.js, React JS, Spring Boot, Swing, Tkinter, gensim \\
+\textbf{Libraries:} Flask, Django, Pandas, NumPy, Matplotlib, Pytorch, Tensorflow \\
+\textbf{Tech/Tools:} GCP, AWS, Docker, Kubernetes, Terraform, DevOps, Grafana, scikit, linux, Wireshark, \\ \hspace{6em} Agile/Scrum, Saleae, nRF SDK, Segger SDK, UNIX, Networking, Git
 \end{tabularx}
 
 %Experience
 \vspace{-0.7em}
-\section{Professional Experience}
+\section{Experience}
 
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
 \textbf{Software Engineer Internship} & \hfill August 2024 - Present
 \end{tabularx}
 \textit{Ommo Technologies, Inc.}
 \vspace{-0.4em}
-\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
-    \item Developed an application to manage the state of products' components, which \textbf{enhanced testing and troubleshooting efficiency by 25\%} for clients.
-    \item Designed and implemented a software change for production facilities to decouple sensor calibration, validation, and flashing processes, creating a streamlined workflow that \textbf{reduces wait times per sensor by 30\%} and eliminates idle time between steps.
-    
+\begin{itemize}
+    \item Develop and maintain Python and PyQT GUIs for sensor manufacturers, significantly enhancing the efficiency and usability of sensor data handling software.
+    \item Built CI/CD pipelines through GitHub Actions, \textbf{reducing development and deployment time} of GUIs by \textbf{25\%.}
+    \item Re-architected software used in the manufacturing pipeline to replace serialized, one-at-a-time tasks with parallelized, asynchronous processes, which resulted in a \textbf{5x boost in throughput.}
 \end{itemize}
 
 \begin{tabularx}{\linewidth}{@{}Xr@{}}
@@ -104,9 +84,9 @@ cross-functional teams. Always happy to be here.
 \end{tabularx}
 \textit{Ommo Technologies, Inc.}
 \vspace{-0.4em}
-\begin{itemize}[leftmargin=*, nosep]    
-    \item Created a software architecture for a custom PCB with Nordic micro-controller (SPIM, UART, I2C, USB) resulting in a \textbf{20\% increase in sampling rate and 10\% decrease in error rate.}
-    \item Performed hardware and unit testing with logic analyzers and oscilloscopes as well as device calibration, \textbf{shortening the development timeline by 20\%}.
+\begin{itemize}   
+    \item Created a software architecture for a custom PCB with Nordic micro-controller (SPIM, UART, I2C, USB) resulting in a \textbf{20\% increase} in sampling rate and \textbf{10\% decrease} in error rate.
+    \item Performed hardware testing with logic analyzers and oscilloscopes as well as unit testing and device calibration, \textbf{shortening development time approximately 20\%}.
 \end{itemize}
 
 %Education
@@ -115,7 +95,7 @@ cross-functional teams. Always happy to be here.
 \end{tabularx}
 \textit{National Science Foundation}
 \vspace{-0.4em}
-\begin{itemize}[leftmargin=*, nosep]
+\begin{itemize}
     \item Trained on smart healthcare, received a \textbf{100\% evaluation} on core aspects of \textbf{cybersecurity and embedded programming} in the medical industry.
 \end{itemize}
 
@@ -131,27 +111,25 @@ University of Texas at Arlington \ GPA (3.72 / 4.0) \\
 
 %Projects
 \vspace{-0.7em}
-\section{Recent Projects}
-
-\href{https://github.com/kilibarda4/pos-tagger-Maithili}{\textbf{POS Tagger for Maithili}} \ \textit{Python, PyTorch, scikit-learn}
-\begin{itemize}[leftmargin=*, nosep]
-\vspace{-0.4em}
-    \item Developed a custom \textbf{CRF + BERT} Part-Of-Speech tagger for the Maithili language, achieving \\ \textbf{91\% accuracy and 90\% precision} on a limited dataset.
-\end{itemize}
+\section{Projects}
 
 %Animal Recognition
 \vspace{-0.4em}
-\href{https://github.com/kilibarda4/animal-recognition-android}{\textbf{Animal Recognition}} \ \textit{Java, Firestore, Google Storage, OAuth, TensorFlow}
-\begin{itemize}[leftmargin=*, nosep]
+\href{https://github.com/kilibarda4/nyse-tracker}
+{\textbf{NYSE Tracker}} \ \textit{React JS, Python Django, Docker, Google Cloud Platform}
+\begin{itemize}
 \vspace{-0.4em}
-    \item Developed a cloud hosted serverless android audio classification app which discerns between 100 species of animals with an \textbf{accuracy of 93\%}, provided personalized profiles and classification history for users.
+    \item Developed a cloud-native full-stack application using React and Django that helps traders get \textbf{real-time} market updates on user-defined watch lists and holdings.
+    \item Leveraged Cloud Functions and Pub/Sub to continuously monitor real-time stock prices and trigger notifications in response to user-defined alerts.
 \end{itemize}
 
 \vspace{-0.4em}
-\href{https://github.com/kilibarda4/natural-language-processing}{\textbf{Natural Language Processing}} \ \textit{Python, sklearn, gensim, PyTorch, Numpy}
-\begin{itemize}[leftmargin=*, nosep]
+\href{https://github.com/kilibarda4/pos-tagger-Maithili}
+{\textbf{Part Of Speech Tagger for Maithili}} \ \textit{Python, scikit-learn, PyTorch}
+\begin{itemize}
 \vspace{-0.4em}
-    \item Built several Machine Learning models for natural language processing from scratch (sentiment-analysis, neural networks, RNN, CRF, HMM, etc.)
+    \item Built a part of speech tagger for the low resource Maithili language by fine tuning BERT transformer.
+    \item Achieved an \textbf{F1 score of 0.89} on a limited dataset by adding a Conditional Random Fields layer.
 \end{itemize}
 
 \vfill
